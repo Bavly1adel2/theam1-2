@@ -1,0 +1,44 @@
+{{#> layouts/base}}
+  {{#*inline "body"}}
+    {{> components/nav}}
+    <main id="main">
+      <section class="section">
+        <div class="container">
+          <div class="grid gap-10 md:grid-cols-12">
+            <div class="md:col-span-7">
+              <h1 class="h1">About NeuroAI</h1>
+              <p class="lead mt-4">
+                A ThemeForest-ready frontend template crafted for AI SaaS products, tools directories, and admin
+                dashboards.
+              </p>
+              <div class="mt-8 grid gap-4 sm:grid-cols-2">
+                <div class="glass rounded-3xl p-6">
+                  <div class="text-sm font-semibold text-ink-200">Mission</div>
+                  <p class="mt-2 text-sm text-ink-300">Ship a clean, modern SaaS UI with minimal custom JS.</p>
+                </div>
+                <div class="glass rounded-3xl p-6">
+                  <div class="text-sm font-semibold text-ink-200">Design</div>
+                  <p class="mt-2 text-sm text-ink-300">Glassmorphism, gradients, and strong hierarchy.</p>
+                </div>
+              </div>
+            </div>
+            <div class="md:col-span-5">
+              <div class="glass rounded-3xl p-6 md:p-8">
+                <div class="text-sm font-semibold text-ink-200">Template stack</div>
+                <ul class="mt-4 grid gap-2 text-sm text-ink-300">
+                  <li>HTML5 pages</li>
+                  <li>TailwindCSS utilities + design tokens</li>
+                  <li>AlpineJS interactions</li>
+                  <li>Vite multi-page build</li>
+                </ul>
+                <a class="btn-secondary mt-6 w-full" href="contact.html">Contact</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    {{> components/footer}}
+  {{/inline}}
+{{/layouts/base}}
+

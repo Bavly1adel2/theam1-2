@@ -1,0 +1,25 @@
+<div class="relative" x-data="{ open: false }">
+  <button
+    type="button"
+    class="{{buttonClass}}"
+    :aria-expanded="open"
+    @click="open = !open"
+    @keydown.escape.window="open = false"
+  >
+    {{label}}
+    <svg class="h-4 w-4 opacity-80" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="m6 9 6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+  <div
+    class="absolute right-0 mt-2 w-56 overflow-hidden rounded-2xl border border-white/10 bg-ink-900/85 shadow-glass backdrop-blur-glass"
+    x-show="open"
+    x-transition.opacity
+    @click.outside="open = false"
+  >
+    <div class="p-2">
+      {{{itemsHtml}}}
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,26 @@
+<header id="site-header" class="sticky top-0 z-30 border-b border-white/10 bg-ink-900/35 backdrop-blur-glass">
+  <div class="nav-inner mx-auto flex h-16 max-w-[1320px] items-center justify-between gap-4 px-4 md:px-6">
+    <div class="flex items-center gap-3">
+      <button
+        type="button"
+        class="btn-ghost h-10 w-10 !p-0 md:hidden"
+        aria-label="Open sidebar"
+        @click="sidebarOpen = true"
+      >
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <div>
+        <div class="text-sm font-semibold">Dashboard</div>
+        <div class="text-xs text-ink-400">Overview • Insights • Activity</div>
+      </div>
+    </div>
+
+    <div class="flex items-center gap-3">
+      {{> components/theme-toggle}}
+      <a class="nav-link-premium px-3 py-2 text-sm" href="index.html">Website</a>
+    </div>
+  </div>
+</header>
+

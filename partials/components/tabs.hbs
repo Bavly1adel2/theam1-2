@@ -1,0 +1,23 @@
+<div x-data="{ active: '{{defaultTab}}' }" class="glass rounded-3xl p-6 md:p-8">
+  <div class="flex flex-wrap gap-2">
+    {{#each tabs}}
+      <button
+        type="button"
+        class="btn-ghost px-3 py-2 text-sm"
+        :class="active === '{{id}}' ? '!bg-white/15 !border-white/20' : ''"
+        @click="active = '{{id}}'"
+      >
+        {{label}}
+      </button>
+    {{/each}}
+  </div>
+
+  <div class="mt-6">
+    {{#each tabs}}
+      <div x-show="active === '{{id}}'" x-transition.opacity>
+        {{{bodyHtml}}}
+      </div>
+    {{/each}}
+  </div>
+</div>
+

@@ -1,0 +1,403 @@
+{{#> layouts/base}}
+  {{> components/nav}}
+  <main id="main">
+    <!-- Hero -->
+    <section class="section hero-parallax" data-parallax-root>
+      <div class="parallax-gradient parallax-layer" data-speed="0.4"></div>
+      <div class="container">
+        <div class="grid gap-10 md:grid-cols-12 md:items-center">
+          <div class="md:col-span-7 parallax-layer" data-speed="0.8">
+            <div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-semibold text-ink-200">
+              <span class="h-2 w-2 rounded-full bg-primary"></span>
+              Demo Showcase • Pages • Components • Sections
+            </div>
+            <h1 class="h1 mt-4 reveal">
+              Explore every demo and UI asset in
+              <span class="gradient-text">NeuroAI</span>.
+            </h1>
+            <p class="lead mt-4 max-w-2xl">
+              A professional ThemeForest-ready frontend for AI SaaS products — featuring a tools directory and a dashboard
+              UI, built with TailwindCSS + AlpineJS + Vite.
+            </p>
+            <div class="mt-7 flex flex-wrap items-center gap-3 reveal" data-stagger>
+              <a class="btn-primary" href="index.html" data-magnetic data-magnetic-strength="5">Open landing</a>
+              <a class="btn-ghost premium-hover" href="dashboard.html" data-magnetic data-magnetic-strength="4">View dashboard</a>
+              <button
+                type="button"
+                class="btn-secondary premium-hover"
+                data-magnetic
+                data-magnetic-strength="4"
+                @click="$store.toast.push('Welcome to NeuroAI demo showcase!', 'success')"
+              >
+                Quick toast
+              </button>
+            </div>
+            <div class="mt-8 grid gap-4 sm:grid-cols-3" data-stagger>
+              <div class="glass rounded-2xl p-4 reveal premium-hover" data-reveal data-tilt data-magnetic>
+                <div class="text-sm font-semibold">4 demos</div>
+                <div class="mt-1 text-sm text-ink-300"><span class="counter font-semibold text-ink-100" data-target="4">0</span> demos</div>
+              </div>
+              <div class="glass rounded-2xl p-4 reveal premium-hover" data-reveal data-tilt data-magnetic>
+                <div class="text-sm font-semibold">30+ pages</div>
+                <div class="mt-1 text-sm text-ink-300"><span class="counter font-semibold text-ink-100" data-target="30">0</span>+ pages</div>
+              </div>
+              <div class="glass rounded-2xl p-4 reveal premium-hover" data-reveal data-tilt data-magnetic>
+                <div class="text-sm font-semibold">Reusable UI</div>
+                <div class="mt-1 text-sm text-ink-300"><span class="counter font-semibold text-ink-100" data-target="18">0</span> UI pieces</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="md:col-span-5 parallax-layer" data-speed="1.2">
+            <div class="glass rounded-3xl p-6 md:p-8 reveal premium-hover" data-reveal data-tilt data-magnetic>
+              <div class="flex items-center justify-between">
+                <div class="text-sm font-semibold text-ink-200">Design system</div>
+                <span class="badge">Dark SaaS</span>
+              </div>
+              <div class="mt-6 grid gap-4">
+                <div class="glass rounded-2xl p-4">
+                  <div class="text-sm font-semibold">Colors</div>
+                  <div class="mt-3 flex items-center gap-2">
+                    <span class="h-5 w-5 rounded-full bg-primary"></span>
+                    <span class="h-5 w-5 rounded-full bg-secondary"></span>
+                    <span class="h-5 w-5 rounded-full bg-accent"></span>
+                    <span class="h-5 w-5 rounded-full bg-ink-900 ring-1 ring-white/10"></span>
+                  </div>
+                </div>
+                <div class="glass rounded-2xl p-4">
+                  <div class="text-sm font-semibold">Typography</div>
+                  <div class="mt-2 text-sm text-ink-300">Inter • 12-column grid • 1320px container</div>
+                </div>
+              </div>
+              <div class="mt-6">
+                <a class="btn-ghost w-full premium-hover" href="features.html" data-magnetic data-magnetic-strength="4">See feature page</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Demo previews (4 demos) -->
+    <section class="section pt-0">
+      <div class="container">
+        <div class="flex items-end justify-between gap-6">
+          <div>
+            <h2 class="h2">Demo previews</h2>
+            <p class="lead mt-3">Four core demos that cover the full product experience.</p>
+          </div>
+          <div class="hidden sm:block">
+            <span class="badge">Responsive</span>
+            <span class="badge">Dark mode</span>
+            <span class="badge">Glass UI</span>
+          </div>
+        </div>
+
+        <div class="mt-8 grid gap-6 md:grid-cols-12" data-stagger>
+          <a class="demo-card group md:col-span-6 reveal" href="index.html" data-reveal data-tilt data-tilt-strength="7" data-magnetic>
+            <div class="flex items-center justify-between">
+              <div class="text-lg font-bold">AI SaaS Landing</div>
+              <span class="badge">Demo 01</span>
+            </div>
+            <p class="mt-2 text-sm text-ink-300">Hero + feature blocks + conversion sections.</p>
+            <div class="relative mt-5 overflow-hidden rounded-2xl border border-white/10">
+              <img class="demo-shot" src="/assets/demo/landing-shot.svg" alt="AI SaaS landing page preview" loading="lazy" />
+              <div class="demo-overlay absolute inset-0 grid place-items-center">
+                <span class="btn-primary">Open demo</span>
+              </div>
+            </div>
+          </a>
+
+          <a class="demo-card group md:col-span-6 reveal" href="tools.html" data-reveal data-tilt data-tilt-strength="7" data-magnetic>
+            <div class="flex items-center justify-between">
+              <div class="text-lg font-bold">Tools Directory</div>
+              <span class="badge">Demo 02</span>
+            </div>
+            <p class="mt-2 text-sm text-ink-300">Card grid + filters and clean list layout.</p>
+            <div class="relative mt-5 overflow-hidden rounded-2xl border border-white/10">
+              <img class="demo-shot" src="/assets/demo/tools-shot.svg" alt="Tools directory preview" loading="lazy" />
+              <div class="demo-overlay absolute inset-0 grid place-items-center">
+                <span class="btn-primary">Open demo</span>
+              </div>
+            </div>
+          </a>
+
+          <a class="demo-card group md:col-span-6 reveal" href="tool-details.html" data-reveal data-tilt data-tilt-strength="7" data-magnetic>
+            <div class="flex items-center justify-between">
+              <div class="text-lg font-bold">Tool Details</div>
+              <span class="badge">Demo 03</span>
+            </div>
+            <p class="mt-2 text-sm text-ink-300">Hero + sticky pricing card + structured sections.</p>
+            <div class="relative mt-5 overflow-hidden rounded-2xl border border-white/10">
+              <img class="demo-shot" src="/assets/demo/tool-details-shot.svg" alt="Tool details page preview" loading="lazy" />
+              <div class="demo-overlay absolute inset-0 grid place-items-center">
+                <span class="btn-primary">Open demo</span>
+              </div>
+            </div>
+          </a>
+
+          <a class="demo-card group md:col-span-6 reveal" href="dashboard.html" data-reveal data-tilt data-tilt-strength="7" data-magnetic>
+            <div class="flex items-center justify-between">
+              <div class="text-lg font-bold">Admin Dashboard</div>
+              <span class="badge">Demo 04</span>
+            </div>
+            <p class="mt-2 text-sm text-ink-300">Sidebar + topbar + widgets + tables.</p>
+            <div class="relative mt-5 overflow-hidden rounded-2xl border border-white/10">
+              <img class="demo-shot" src="/assets/demo/dashboard-shot.svg" alt="Admin dashboard preview" loading="lazy" />
+              <div class="demo-overlay absolute inset-0 grid place-items-center">
+                <span class="btn-primary">Open demo</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dashboard preview -->
+    <section class="section pt-0">
+      <div class="container">
+        <div class="glass rounded-3xl p-6 md:p-10 reveal premium-hover" data-reveal data-tilt data-magnetic>
+          <div class="grid gap-8 md:grid-cols-12 md:items-center">
+            <div class="md:col-span-7">
+              <h2 class="h2">Dashboard preview</h2>
+              <p class="lead mt-3">
+                A modern admin layout for subscriptions, usage analytics, and tool submissions. Designed with consistent
+                spacing, readable hierarchy, and responsive behavior.
+              </p>
+              <div class="mt-6 flex flex-wrap items-center gap-3">
+                <a class="btn-primary" href="dashboard.html" data-magnetic data-magnetic-strength="5">Open dashboard</a>
+                <a class="btn-ghost premium-hover" href="pricing.html" data-magnetic data-magnetic-strength="4">Billing demo</a>
+              </div>
+            </div>
+            <div class="md:col-span-5">
+              <img
+                class="preview-shot float-card parallax-layer"
+                data-speed="0.9"
+                src="/assets/demo/hero-preview.svg"
+                alt="Premium dashboard and UI kit preview"
+                loading="lazy"
+              />
+              <div class="mt-3 text-xs text-ink-400">Premium preview visual for dashboard and reusable UI blocks.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pages showcase (30+ pages) -->
+    <section class="section pt-0">
+      <div class="container">
+        <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div>
+            <h2 class="h2">Pages showcase</h2>
+            <p class="lead mt-3">A complete set of marketing + directory + auth + dashboard pages (and a scalable path to 30+).</p>
+          </div>
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="badge">Ready</span>
+            <span class="badge">Planned</span>
+          </div>
+        </div>
+
+        <div class="mt-8 grid gap-6 md:grid-cols-12">
+          <div class="glass rounded-3xl p-6 md:col-span-7 reveal" data-reveal>
+            <div class="text-sm font-semibold text-ink-200">Ready pages</div>
+            <div class="mt-4 grid gap-3 sm:grid-cols-2" data-stagger>
+              <a class="glass rounded-2xl px-4 py-3 hover:bg-white/8 premium-hover reveal" data-reveal data-tilt data-magnetic href="index.html"><span class="font-semibold">Home</span> <span class="text-sm text-ink-300">Landing</span></a>
+              <a class="glass rounded-2xl px-4 py-3 hover:bg-white/8 premium-hover reveal" data-reveal data-tilt data-magnetic href="demo-showcase.html"><span class="font-semibold">Demo Showcase</span> <span class="text-sm text-ink-300">All assets</span></a>
+              <a class="glass rounded-2xl px-4 py-3 hover:bg-white/8 premium-hover reveal" data-reveal data-tilt data-magnetic href="features.html"><span class="font-semibold">Features</span> <span class="text-sm text-ink-300">Grid + FAQ</span></a>
+              <a class="glass rounded-2xl px-4 py-3 hover:bg-white/8 premium-hover reveal" data-reveal data-tilt data-magnetic href="pricing.html"><span class="font-semibold">Pricing</span> <span class="text-sm text-ink-300">Plans</span></a>
+              <a class="glass rounded-2xl px-4 py-3 hover:bg-white/8 premium-hover reveal" data-reveal data-tilt data-magnetic href="integrations.html"><span class="font-semibold">Integrations</span> <span class="text-sm text-ink-300">Cards</span></a>
+              <a class="glass rounded-2xl px-4 py-3 hover:bg-white/8 premium-hover reveal" data-reveal data-tilt data-magnetic href="blog.html"><span class="font-semibold">Blog</span> <span class="text-sm text-ink-300">Listing</span></a>
+              <a class="glass rounded-2xl px-4 py-3 hover:bg-white/8 premium-hover reveal" data-reveal data-tilt data-magnetic href="blog-details.html"><span class="font-semibold">Blog Details</span> <span class="text-sm text-ink-300">Article</span></a>
+              <a class="glass rounded-2xl px-4 py-3 hover:bg-white/8 premium-hover reveal" data-reveal data-tilt data-magnetic href="about.html"><span class="font-semibold">About</span> <span class="text-sm text-ink-300">Company</span></a>
+              <a class="glass rounded-2xl px-4 py-3 hover:bg-white/8 premium-hover reveal" data-reveal data-tilt data-magnetic href="contact.html"><span class="font-semibold">Contact</span> <span class="text-sm text-ink-300">Form</span></a>
+              <a class="glass rounded-2xl px-4 py-3 hover:bg-white/8 premium-hover reveal" data-reveal data-tilt data-magnetic href="login.html"><span class="font-semibold">Login</span> <span class="text-sm text-ink-300">Auth</span></a>
+              <a class="glass rounded-2xl px-4 py-3 hover:bg-white/8 premium-hover reveal" data-reveal data-tilt data-magnetic href="register.html"><span class="font-semibold">Register</span> <span class="text-sm text-ink-300">Auth</span></a>
+              <a class="glass rounded-2xl px-4 py-3 hover:bg-white/8 premium-hover reveal" data-reveal data-tilt data-magnetic href="tools.html"><span class="font-semibold">Tools</span> <span class="text-sm text-ink-300">Directory</span></a>
+              <a class="glass rounded-2xl px-4 py-3 hover:bg-white/8 premium-hover reveal" data-reveal data-tilt data-magnetic href="tool-details.html"><span class="font-semibold">Tool Details</span> <span class="text-sm text-ink-300">Profile</span></a>
+              <a class="glass rounded-2xl px-4 py-3 hover:bg-white/8 premium-hover reveal" data-reveal data-tilt data-magnetic href="dashboard.html"><span class="font-semibold">Dashboard</span> <span class="text-sm text-ink-300">Admin UI</span></a>
+            </div>
+          </div>
+
+          <div class="glass rounded-3xl p-6 md:col-span-5 reveal premium-hover" data-reveal data-tilt data-magnetic>
+            <div class="flex items-center justify-between">
+              <div class="text-sm font-semibold text-ink-200">Planned pages (for 30+)</div>
+              <span class="badge">Roadmap</span>
+            </div>
+            <p class="mt-3 text-sm text-ink-300">
+              These are common ThemeForest expansion pages. You can add them using the same layouts and components.
+            </p>
+            <div class="mt-4 grid gap-3 sm:grid-cols-2" data-stagger>
+              <div class="glass rounded-2xl px-4 py-3 reveal premium-hover" data-reveal data-tilt data-magnetic><div class="font-semibold">Dashboard • Settings</div><div class="text-sm text-ink-400">Profile, preferences</div></div>
+              <div class="glass rounded-2xl px-4 py-3"><div class="font-semibold">Dashboard • Billing</div><div class="text-sm text-ink-400">Invoices, plans</div></div>
+              <div class="glass rounded-2xl px-4 py-3"><div class="font-semibold">Dashboard • API Keys</div><div class="text-sm text-ink-400">Key management</div></div>
+              <div class="glass rounded-2xl px-4 py-3"><div class="font-semibold">Dashboard • Usage</div><div class="text-sm text-ink-400">Charts + logs</div></div>
+              <div class="glass rounded-2xl px-4 py-3"><div class="font-semibold">Dashboard • Team</div><div class="text-sm text-ink-400">Members, roles</div></div>
+              <div class="glass rounded-2xl px-4 py-3"><div class="font-semibold">Dashboard • Notifications</div><div class="text-sm text-ink-400">Email + in-app</div></div>
+              <div class="glass rounded-2xl px-4 py-3"><div class="font-semibold">Directory • Categories</div><div class="text-sm text-ink-400">Category landing</div></div>
+              <div class="glass rounded-2xl px-4 py-3"><div class="font-semibold">Directory • Submit Tool</div><div class="text-sm text-ink-400">Submission form</div></div>
+              <div class="glass rounded-2xl px-4 py-3"><div class="font-semibold">Auth • Forgot Password</div><div class="text-sm text-ink-400">Reset flow</div></div>
+              <div class="glass rounded-2xl px-4 py-3"><div class="font-semibold">Auth • Verify Email</div><div class="text-sm text-ink-400">OTP / link</div></div>
+              <div class="glass rounded-2xl px-4 py-3"><div class="font-semibold">Legal • Terms</div><div class="text-sm text-ink-400">Legal</div></div>
+              <div class="glass rounded-2xl px-4 py-3"><div class="font-semibold">Legal • Privacy</div><div class="text-sm text-ink-400">Legal</div></div>
+              <div class="glass rounded-2xl px-4 py-3"><div class="font-semibold">Support • Help Center</div><div class="text-sm text-ink-400">FAQ index</div></div>
+              <div class="glass rounded-2xl px-4 py-3"><div class="font-semibold">Support • 404</div><div class="text-sm text-ink-400">Error page</div></div>
+              <div class="glass rounded-2xl px-4 py-3"><div class="font-semibold">Support • 500</div><div class="text-sm text-ink-400">Error page</div></div>
+              <div class="glass rounded-2xl px-4 py-3 reveal premium-hover" data-reveal data-tilt data-magnetic><div class="font-semibold">Marketing • Careers</div><div class="text-sm text-ink-400">Hiring</div></div>
+            </div>
+            <div class="mt-4 text-xs text-ink-400">
+              Planned list contains 16 items + 14 ready pages = 30 pages showcased.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- UI components preview -->
+    <section class="section pt-0">
+      <div class="container">
+        <h2 class="h2">UI components preview</h2>
+        <p class="lead mt-3">Reusable buttons, forms, overlays, and micro-interactions.</p>
+
+        <div class="mt-8 grid gap-6 md:grid-cols-12">
+          <div class="glass rounded-3xl p-6 md:col-span-6 reveal premium-hover" data-reveal data-tilt data-magnetic>
+            <div class="text-sm font-semibold text-ink-200">Buttons + badges</div>
+            <div class="mt-4 flex flex-wrap items-center gap-2">
+              <button type="button" class="btn-primary" data-magnetic data-magnetic-strength="5">Primary</button>
+              <button type="button" class="btn-secondary">Secondary</button>
+              <button type="button" class="btn-ghost">Ghost</button>
+              <span class="badge">Badge</span>
+              <span class="badge">New</span>
+            </div>
+            <div class="mt-6 text-sm font-semibold text-ink-200">Toast + modal</div>
+            <div class="mt-3 flex flex-wrap items-center gap-2">
+              <button type="button" class="btn-ghost" @click="$store.toast.push('Saved successfully', 'success')">Toast</button>
+              {{> components/modal
+                triggerClass="btn-primary"
+                triggerLabel="Open modal"
+                title="Component modal"
+                subtitle="Reusable modal partial (Alpine)."
+                bodyHtml="<p>Perfect for confirmations, onboarding, and quick forms.</p>"
+                cancelLabel="Cancel"
+                confirmLabel="Confirm"
+              }}
+            </div>
+          </div>
+
+          <div class="glass rounded-3xl p-6 md:col-span-6 reveal premium-hover" data-reveal data-tilt data-magnetic>
+            <div class="text-sm font-semibold text-ink-200">Forms</div>
+            <div class="mt-4 grid gap-3">
+              <input class="input" type="text" placeholder="Text input" />
+              <input class="input" type="email" placeholder="Email input" />
+              <select class="input">
+                <option>Select</option>
+                <option>Option A</option>
+                <option>Option B</option>
+              </select>
+              <label class="inline-flex items-center gap-2 text-sm text-ink-300">
+                <input type="checkbox" class="rounded border-white/10 bg-white/5" />
+                Checkbox
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sections library preview -->
+    <section class="section pt-0">
+      <div class="container">
+        <h2 class="h2">Sections library</h2>
+        <p class="lead mt-3">Swap sections to build new pages fast: hero, pricing, FAQ, stats, testimonials, CTAs.</p>
+
+        <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3" data-stagger>
+          <div class="glass rounded-3xl p-6 reveal premium-hover" data-reveal data-tilt data-magnetic>
+            <div class="text-lg font-bold">Hero variants</div>
+            <p class="mt-2 text-sm text-ink-300">Gradient headline, CTAs, proof points.</p>
+          </div>
+          <div class="glass rounded-3xl p-6 reveal premium-hover" data-reveal data-tilt data-magnetic>
+            <div class="text-lg font-bold">Feature grids</div>
+            <p class="mt-2 text-sm text-ink-300">Cards, icons, comparisons.</p>
+          </div>
+          <div class="glass rounded-3xl p-6 reveal premium-hover" data-reveal data-tilt data-magnetic>
+            <div class="text-lg font-bold">Pricing blocks</div>
+            <p class="mt-2 text-sm text-ink-300">Plan cards, emphasis tiers, FAQs.</p>
+          </div>
+          <div class="glass rounded-3xl p-6 reveal premium-hover" data-reveal data-tilt data-magnetic>
+            <div class="text-lg font-bold">Directory layouts</div>
+            <p class="mt-2 text-sm text-ink-300">Filters + listing patterns.</p>
+          </div>
+          <div class="glass rounded-3xl p-6 reveal premium-hover" data-reveal data-tilt data-magnetic>
+            <div class="text-lg font-bold">Blog layouts</div>
+            <p class="mt-2 text-sm text-ink-300">Cards + typography article.</p>
+          </div>
+          <div class="glass rounded-3xl p-6 reveal premium-hover" data-reveal data-tilt data-magnetic>
+            <div class="text-lg font-bold">CTAs</div>
+            <p class="mt-2 text-sm text-ink-300">Final conversion sections.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features grid -->
+    <section class="section pt-0">
+      <div class="container">
+        <h2 class="h2">Feature grid</h2>
+        <p class="lead mt-3">High-signal highlights that sell the template.</p>
+
+        <div class="mt-8 grid gap-6 md:grid-cols-12" data-stagger>
+          <div class="glass rounded-3xl p-6 md:col-span-4 reveal premium-hover" data-reveal data-tilt data-magnetic>
+            <div class="badge">Layout</div>
+            <div class="mt-4 text-lg font-bold">12-column grid</div>
+            <p class="mt-2 text-sm text-ink-300">1320px container for crisp marketing pages.</p>
+          </div>
+          <div class="glass rounded-3xl p-6 md:col-span-4 reveal premium-hover" data-reveal data-tilt data-magnetic>
+            <div class="badge">Theme</div>
+            <div class="mt-4 text-lg font-bold">Dark mode</div>
+            <p class="mt-2 text-sm text-ink-300">Light / dark / system with persistence and no flash.</p>
+          </div>
+          <div class="glass rounded-3xl p-6 md:col-span-4 reveal premium-hover" data-reveal data-tilt data-magnetic>
+            <div class="badge">SEO</div>
+            <div class="mt-4 text-lg font-bold">Semantic HTML</div>
+            <p class="mt-2 text-sm text-ink-300">Clean structure with meta + OG + canonical placeholders.</p>
+          </div>
+          <div class="glass rounded-3xl p-6 md:col-span-4 reveal premium-hover" data-reveal data-tilt data-magnetic>
+            <div class="badge">UI</div>
+            <div class="mt-4 text-lg font-bold">Glass cards</div>
+            <p class="mt-2 text-sm text-ink-300">Rounded cards, subtle borders, and depth.</p>
+          </div>
+          <div class="glass rounded-3xl p-6 md:col-span-4 reveal premium-hover" data-reveal data-tilt data-magnetic>
+            <div class="badge">JS</div>
+            <div class="mt-4 text-lg font-bold">Alpine interactions</div>
+            <p class="mt-2 text-sm text-ink-300">Dropdowns, modals, accordions, and toasts.</p>
+          </div>
+          <div class="glass rounded-3xl p-6 md:col-span-4 reveal premium-hover" data-reveal data-tilt data-magnetic>
+            <div class="badge">Build</div>
+            <div class="mt-4 text-lg font-bold">Vite multi-page</div>
+            <p class="mt-2 text-sm text-ink-300">Fast dev server and production build output.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section pt-0">
+      <div class="container">
+        <div class="glass rounded-3xl p-8 md:p-12 reveal premium-hover" data-reveal data-tilt data-magnetic>
+          <div class="grid gap-8 md:grid-cols-12 md:items-center">
+            <div class="md:col-span-8">
+              <h2 class="h2">Ready to launch your AI SaaS?</h2>
+              <p class="lead mt-3">Start from a clean, modern foundation and customize it to your brand in minutes.</p>
+            </div>
+            <div class="md:col-span-4 md:text-right">
+              <a class="btn-primary" href="register.html" data-magnetic data-magnetic-strength="5">Get started</a>
+              <a class="btn-ghost ml-2 premium-hover" href="pricing.html" data-magnetic data-magnetic-strength="4">See pricing</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  {{> components/footer}}
+{{/layouts/base}}
+
