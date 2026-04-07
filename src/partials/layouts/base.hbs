@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <title>{{meta.title}}</title>
+    {{> components/meta}}
+    <script type="module" src="/scripts/early-theme.js"></script>
+    <link rel="stylesheet" href="/styles/app.css" />
+  </head>
+  <body class="min-h-screen neo-gradient">
+    <div class="neuro-signature" data-signature-root aria-hidden="true">
+      <span class="neuro-signature__beam"></span>
+      <span class="neuro-signature__grain"></span>
+    </div>
+    {{> components/skip-link}}
+    {{> @partial-block}}
+    {{> components/toast}}
+    <script type="module" src="/scripts/main.js"></script>
+  </body>
+</html>
+

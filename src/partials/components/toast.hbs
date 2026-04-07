@@ -1,0 +1,26 @@
+<div
+  class="fixed bottom-4 right-4 z-[70] grid gap-2"
+  x-data
+  aria-live="polite"
+  aria-relevant="additions"
+>
+  <template x-for="t in $store.toast.items" :key="t.id">
+    <div
+      class="glass flex max-w-sm items-start gap-3 rounded-2xl p-4"
+      x-transition.opacity
+    >
+      <div
+        class="mt-0.5 h-2.5 w-2.5 rounded-full"
+        :class="t.variant === 'success' ? 'bg-secondary' : (t.variant === 'danger' ? 'bg-accent' : 'bg-primary')"
+        aria-hidden="true"
+      ></div>
+      <div class="text-sm text-ink-200" x-text="t.message"></div>
+      <button type="button" class="ml-auto text-ink-300 hover:text-white" @click="$store.toast.remove(t.id)" aria-label="Dismiss">
+        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+  </template>
+</div>
+

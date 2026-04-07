@@ -1,0 +1,57 @@
+<div class="flex items-center gap-2" x-data>
+  <button
+    type="button"
+    class="btn-ghost h-10 w-10 !p-0"
+    :aria-pressed="$store.theme.mode === 'light'"
+    aria-label="Switch to light theme"
+    @click="$store.theme.set('light')"
+  >
+    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path
+        d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12Z"
+        stroke="currentColor"
+        stroke-width="2"
+      />
+      <path
+        d="M12 2v2M12 20v2M4 12H2M22 12h-2M5 5 3.5 3.5M20.5 20.5 19 19M19 5l1.5-1.5M3.5 20.5 5 19"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+      />
+    </svg>
+  </button>
+  <button
+    type="button"
+    class="btn-ghost h-10 w-10 !p-0"
+    :aria-pressed="$store.theme.mode === 'dark'"
+    aria-label="Switch to dark theme"
+    @click="$store.theme.set('dark')"
+  >
+    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path
+        d="M21 14.1A8.5 8.5 0 0 1 9.9 3 7 7 0 1 0 21 14.1Z"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linejoin="round"
+      />
+    </svg>
+  </button>
+  <button
+    type="button"
+    class="btn-ghost h-10 w-10 !p-0"
+    :aria-pressed="$store.theme.mode === 'system'"
+    aria-label="Use system theme"
+    @click="$store.theme.set('system')"
+  >
+    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path
+        d="M8 21h8M12 17v4M7 17h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7a3 3 0 0 0 3 3Z"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  </button>
+</div>
+

@@ -1,0 +1,68 @@
+<header id="site-header" class="sticky top-0 z-50 border-b border-white/10 bg-ink-900/40 backdrop-blur-glass transition-colors">
+  <div class="container">
+    <div class="nav-inner flex h-16 items-center justify-between gap-4">
+      {{> components/logo}}
+
+      <nav class="hidden items-center gap-1 md:flex" aria-label="Primary">
+        <a class="btn-ghost px-3 py-2 text-sm" href="demo-showcase.html">Demos</a>
+        <a class="btn-ghost px-3 py-2 text-sm" href="features.html">Features</a>
+        <a class="btn-ghost px-3 py-2 text-sm" href="tools.html">Tools</a>
+        <a class="btn-ghost px-3 py-2 text-sm" href="pricing.html">Pricing</a>
+        <a class="btn-ghost px-3 py-2 text-sm" href="integrations.html">Integrations</a>
+        <a class="btn-ghost px-3 py-2 text-sm" href="blog.html">Blog</a>
+        <a class="btn-ghost px-3 py-2 text-sm" href="about.html">About</a>
+        <a class="btn-ghost px-3 py-2 text-sm" href="contact.html">Contact</a>
+      </nav>
+
+      <div class="hidden items-center gap-3 md:flex">
+        {{> components/theme-toggle}}
+        <a class="btn-ghost px-3 py-2 text-sm" href="login.html">Login</a>
+        <a class="btn-primary px-3 py-2 text-sm" href="register.html">Get started</a>
+      </div>
+
+      <div class="md:hidden" x-data="{ open: false }">
+        <button
+          type="button"
+          class="btn-ghost h-10 w-10 !p-0"
+          :aria-expanded="open"
+          aria-controls="mobile-menu"
+          aria-label="Open menu"
+          @click="open = !open"
+        >
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+
+        <div
+          id="mobile-menu"
+          class="absolute left-0 right-0 top-16 border-b border-white/10 bg-ink-900/85 backdrop-blur-glass"
+          x-show="open"
+          x-transition.opacity
+          @click.outside="open = false"
+        >
+          <div class="container py-4">
+            <div class="grid gap-2">
+              <a class="btn-ghost justify-start px-3 py-2" href="demo-showcase.html">Demos</a>
+              <a class="btn-ghost justify-start px-3 py-2" href="features.html">Features</a>
+              <a class="btn-ghost justify-start px-3 py-2" href="tools.html">Tools</a>
+              <a class="btn-ghost justify-start px-3 py-2" href="pricing.html">Pricing</a>
+              <a class="btn-ghost justify-start px-3 py-2" href="integrations.html">Integrations</a>
+              <a class="btn-ghost justify-start px-3 py-2" href="blog.html">Blog</a>
+              <a class="btn-ghost justify-start px-3 py-2" href="about.html">About</a>
+              <a class="btn-ghost justify-start px-3 py-2" href="contact.html">Contact</a>
+              <div class="mt-2 flex items-center justify-between">
+                {{> components/theme-toggle}}
+                <div class="flex items-center gap-2">
+                  <a class="btn-ghost px-3 py-2" href="login.html">Login</a>
+                  <a class="btn-primary px-3 py-2" href="register.html">Get started</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+

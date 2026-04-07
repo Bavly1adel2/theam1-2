@@ -1,0 +1,6 @@
+node_modules
+dist
+themeforest-package
+.DS_Store
+.vite
+

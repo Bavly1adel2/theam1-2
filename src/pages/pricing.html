@@ -1,0 +1,61 @@
+{{#> layouts/base}}
+  {{#*inline "body"}}
+    {{> components/nav}}
+    <main id="main">
+      <section class="section">
+        <div class="container">
+          <div class="max-w-3xl">
+            <h1 class="h1">Simple pricing that scales</h1>
+            <p class="lead mt-4">Plans designed for startups, teams, and enterprise AI workloads.</p>
+          </div>
+
+          <div class="mt-10 grid gap-6 md:grid-cols-12">
+            <div class="glass rounded-3xl p-6 md:col-span-4">
+              <div class="flex items-center justify-between">
+                <div class="text-lg font-bold">Starter</div>
+                <span class="badge">Best for MVP</span>
+              </div>
+              <div class="mt-5 text-4xl font-extrabold">$19<span class="text-base font-semibold text-ink-300">/mo</span></div>
+              <ul class="mt-5 grid gap-2 text-sm text-ink-300">
+                <li>10k tokens/day</li>
+                <li>Tools directory access</li>
+                <li>Email support</li>
+              </ul>
+              <a class="btn-primary mt-6 w-full" href="register.html">Choose Starter</a>
+            </div>
+
+            <div class="glass rounded-3xl p-6 ring-1 ring-primary/40 md:col-span-4">
+              <div class="flex items-center justify-between">
+                <div class="text-lg font-bold">Pro</div>
+                <span class="badge">Most popular</span>
+              </div>
+              <div class="mt-5 text-4xl font-extrabold">$49<span class="text-base font-semibold text-ink-300">/mo</span></div>
+              <ul class="mt-5 grid gap-2 text-sm text-ink-300">
+                <li>100k tokens/day</li>
+                <li>Team workspace</li>
+                <li>Priority support</li>
+              </ul>
+              <a class="btn-secondary mt-6 w-full" href="register.html">Choose Pro</a>
+            </div>
+
+            <div class="glass rounded-3xl p-6 md:col-span-4">
+              <div class="flex items-center justify-between">
+                <div class="text-lg font-bold">Enterprise</div>
+                <span class="badge">Custom</span>
+              </div>
+              <div class="mt-5 text-4xl font-extrabold">Let’s talk</div>
+              <ul class="mt-5 grid gap-2 text-sm text-ink-300">
+                <li>SLA + SSO</li>
+                <li>Custom limits</li>
+                <li>Dedicated support</li>
+              </ul>
+              <a class="btn-ghost mt-6 w-full" href="contact.html">Contact sales</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    {{> components/footer}}
+  {{/inline}}
+{{/layouts/base}}
+

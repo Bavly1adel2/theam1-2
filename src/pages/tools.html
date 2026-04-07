@@ -1,0 +1,70 @@
+{{#> layouts/base}}
+  {{#*inline "body"}}
+    {{> components/nav}}
+    <main id="main">
+      <section class="section">
+        <div class="container">
+          <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+            <div class="max-w-2xl">
+              <h1 class="h1">AI tools directory</h1>
+              <p class="lead mt-4">
+                Browse and filter tools with clean, SEO-friendly card markup. Use this page as a directory starter.
+              </p>
+            </div>
+            <div class="glass rounded-2xl p-3">
+              <div class="flex flex-wrap items-center gap-2">
+                <input class="input !w-64" type="search" placeholder="Search tools..." />
+                <select class="input !w-44">
+                  <option>Category</option>
+                  <option>Writing</option>
+                  <option>Design</option>
+                  <option>Video</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <article class="glass rounded-3xl p-6 transition hover:-translate-y-0.5 hover:bg-white/8">
+              <div class="flex items-center justify-between">
+                <div class="text-lg font-bold">Prompt Studio</div>
+                <span class="badge">Writing</span>
+              </div>
+              <p class="mt-2 text-sm text-ink-300">Build prompts, templates, and workflows with a clean editor UI.</p>
+              <div class="mt-5 flex items-center justify-between">
+                <span class="text-sm font-semibold text-secondary">Freemium</span>
+                <a class="btn-ghost px-3 py-2 text-sm" href="tool-details.html">Details</a>
+              </div>
+            </article>
+
+            <article class="glass rounded-3xl p-6 transition hover:-translate-y-0.5 hover:bg-white/8">
+              <div class="flex items-center justify-between">
+                <div class="text-lg font-bold">Video Gen</div>
+                <span class="badge">Video</span>
+              </div>
+              <p class="mt-2 text-sm text-ink-300">Generate short clips, scripts, and captions with AI assistance.</p>
+              <div class="mt-5 flex items-center justify-between">
+                <span class="text-sm font-semibold text-secondary">$29/mo</span>
+                <a class="btn-ghost px-3 py-2 text-sm" href="tool-details.html">Details</a>
+              </div>
+            </article>
+
+            <article class="glass rounded-3xl p-6 transition hover:-translate-y-0.5 hover:bg-white/8">
+              <div class="flex items-center justify-between">
+                <div class="text-lg font-bold">SEO Copilot</div>
+                <span class="badge">Marketing</span>
+              </div>
+              <p class="mt-2 text-sm text-ink-300">Outline, write, and optimize content with a structured workflow.</p>
+              <div class="mt-5 flex items-center justify-between">
+                <span class="text-sm font-semibold text-secondary">$19/mo</span>
+                <a class="btn-ghost px-3 py-2 text-sm" href="tool-details.html">Details</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+    {{> components/footer}}
+  {{/inline}}
+{{/layouts/base}}
+
