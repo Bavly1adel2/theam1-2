@@ -1,0 +1,21 @@
+<aside
+  class="glass fixed inset-y-0 left-0 z-40 w-72 -translate-x-full border-r border-white/10 bg-ink-900/60 p-4 transition md:translate-x-0"
+  :class="sidebarOpen ? 'translate-x-0' : '-translate-x-full'"
+>
+  <div class="flex items-center justify-between gap-3">
+    {{> components/logo}}
+    <button type="button" class="btn-ghost h-10 w-10 !p-0 md:hidden" @click="sidebarOpen = false" aria-label="Close sidebar">
+      <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+
+  <nav class="mt-6 grid gap-2 text-sm" aria-label="Dashboard">
+    <a class="nav-link-premium justify-start px-3 py-2" href="dashboard.html">Overview</a>
+    <a class="nav-link-premium justify-start px-3 py-2" href="tools.html">Tools directory</a>
+    <a class="nav-link-premium justify-start px-3 py-2" href="pricing.html">Billing</a>
+    <a class="nav-link-premium justify-start px-3 py-2" href="integrations.html">Integrations</a>
+  </nav>
+</aside>
+

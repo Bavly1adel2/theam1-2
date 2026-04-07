@@ -1,0 +1,70 @@
+{{#> layouts/base}}
+  {{#*inline "body"}}
+    {{> components/nav}}
+    <main id="main">
+      <section class="section">
+        <div class="container">
+          <div class="max-w-3xl">
+            <h1 class="h1">Features built for AI products</h1>
+            <p class="lead mt-4">
+              A clean SaaS layout with glass cards, gradients, dark mode, and reusable components — optimized for
+              marketing pages and product dashboards.
+            </p>
+          </div>
+
+          <div class="mt-10 grid gap-6 md:grid-cols-12">
+            <div class="glass rounded-3xl p-6 md:col-span-4">
+              <div class="badge">Design</div>
+              <h2 class="mt-4 text-lg font-bold">Modern glassmorphism</h2>
+              <p class="mt-2 text-sm text-ink-300">Layered cards, subtle borders, and depth without clutter.</p>
+            </div>
+            <div class="glass rounded-3xl p-6 md:col-span-4">
+              <div class="badge">UX</div>
+              <h2 class="mt-4 text-lg font-bold">Smooth interactions</h2>
+              <p class="mt-2 text-sm text-ink-300">Alpine-powered dropdowns, modals, and transitions.</p>
+            </div>
+            <div class="glass rounded-3xl p-6 md:col-span-4">
+              <div class="badge">Dev</div>
+              <h2 class="mt-4 text-lg font-bold">Component partials</h2>
+              <p class="mt-2 text-sm text-ink-300">Assemble pages from reusable layouts and sections.</p>
+            </div>
+          </div>
+
+          <div class="mt-10 grid gap-6 md:grid-cols-12">
+            <div class="md:col-span-6">
+              <h2 class="text-xl font-extrabold tracking-tight">Interactive components</h2>
+              <p class="mt-2 text-sm text-ink-300">Demo dropdown + modal + toast.</p>
+              <div class="mt-4 flex flex-wrap items-center gap-3">
+                {{> components/dropdown
+                  buttonClass="btn-ghost px-3 py-2 text-sm"
+                  label="Options"
+                  itemsHtml="<a class='btn-ghost w-full justify-start px-3 py-2 text-sm' href='pricing.html'>Pricing</a><a class='btn-ghost w-full justify-start px-3 py-2 text-sm' href='tools.html'>Tools</a><button class='btn-ghost w-full justify-start px-3 py-2 text-sm' type='button' @click='$store.toast.push(\"Saved\", \"success\")'>Toast</button>"
+                }}
+                {{> components/modal
+                  triggerClass="btn-primary"
+                  triggerLabel="Open modal"
+                  title="Quick action"
+                  subtitle="A reusable modal partial powered by Alpine."
+                  bodyHtml="<p>Use this component for confirmations, forms, or onboarding steps.</p>"
+                  cancelLabel="Cancel"
+                  confirmLabel="Confirm"
+                }}
+                <button type="button" class="btn-secondary" @click="$store.toast.push('Welcome to NeuroAI!', 'info')">Show toast</button>
+              </div>
+            </div>
+
+            <div class="md:col-span-6" x-data="{ items: [{ title: 'Is dark mode supported?', body: 'Yes — class-based dark mode with persisted preference.' }, { title: 'Is it responsive?', body: 'Yes — built on a 12-column grid with a 1320px container.' }, { title: 'Can I reuse components?', body: 'Yes — partials for layouts, nav, footer, and interactive UI.' }] }">
+              <h2 class="text-xl font-extrabold tracking-tight">FAQ accordion</h2>
+              <p class="mt-2 text-sm text-ink-300">A simple accordion pattern using Alpine.</p>
+              <div class="mt-4">
+                {{> components/accordion}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    {{> components/footer}}
+  {{/inline}}
+{{/layouts/base}}
+

@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <title>{{meta.title}}</title>
+    {{> components/meta}}
+    <script type="module" src="/scripts/early-theme.js"></script>
+    <link rel="stylesheet" href="/styles/app.css" />
+  </head>
+  <body class="min-h-screen bg-ink-900 text-ink-100">
+    {{> components/skip-link}}
+    <div class="min-h-screen neo-gradient">
+      {{> @partial-block}}
+    </div>
+    {{> components/toast}}
+    <script type="module" src="/scripts/main.js"></script>
+  </body>
+</html>
+

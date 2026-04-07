@@ -1,0 +1,42 @@
+{{#> layouts/base}}
+  {{> components/nav}}
+  <main id="main">
+      <section class="section">
+        <div class="container">
+          <div class="mx-auto max-w-md">
+            <div class="glass rounded-3xl p-6 md:p-8">
+              <h1 class="text-2xl font-extrabold tracking-tight">Create your account</h1>
+              <p class="mt-2 text-sm text-ink-300">Start building with NeuroAI in minutes.</p>
+
+              <form class="mt-6 grid gap-4">
+                <div>
+                  <label class="text-sm font-semibold" for="name">Name</label>
+                  <input class="input mt-2" id="name" type="text" autocomplete="name" placeholder="Your name" />
+                </div>
+                <div>
+                  <label class="text-sm font-semibold" for="email">Email</label>
+                  <input class="input mt-2" id="email" type="email" autocomplete="email" placeholder="you@company.com" />
+                </div>
+                <div>
+                  <label class="text-sm font-semibold" for="password">Password</label>
+                  <input class="input mt-2" id="password" type="password" autocomplete="new-password" placeholder="Create a password" />
+                </div>
+                <label class="inline-flex items-center gap-2 text-sm text-ink-300">
+                  <input type="checkbox" class="rounded border-white/10 bg-white/5" />
+                  I agree to the terms
+                </label>
+                <button class="btn-secondary w-full" type="button">Create account</button>
+              </form>
+
+              <p class="mt-6 text-sm text-ink-300">
+                Already have an account?
+                <a class="font-semibold text-secondary hover:text-secondary/90" href="login.html">Sign in</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+  </main>
+  {{> components/footer}}
+{{/layouts/base}}
+

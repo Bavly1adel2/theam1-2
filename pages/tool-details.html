@@ -1,0 +1,64 @@
+{{#> layouts/base}}
+  {{#*inline "body"}}
+    {{> components/nav}}
+    <main id="main">
+      <section class="section">
+        <div class="container">
+          <div class="grid gap-10 md:grid-cols-12">
+            <div class="md:col-span-7">
+              <div class="flex flex-wrap items-center gap-2">
+                <span class="badge">Writing</span>
+                <span class="badge">Freemium</span>
+                <span class="badge">API</span>
+              </div>
+              <h1 class="h1 mt-4">Prompt Studio</h1>
+              <p class="lead mt-4">
+                A clean tool details layout: hero, feature bullets, screenshots placeholder, pricing card, and reviews.
+              </p>
+
+              <div class="mt-8 grid gap-4 sm:grid-cols-2">
+                <div class="glass rounded-3xl p-6">
+                  <div class="text-sm font-semibold">Best for</div>
+                  <p class="mt-2 text-sm text-ink-300">Teams writing prompts, templates, and reusable workflows.</p>
+                </div>
+                <div class="glass rounded-3xl p-6">
+                  <div class="text-sm font-semibold">Highlights</div>
+                  <ul class="mt-2 grid gap-2 text-sm text-ink-300">
+                    <li>Prompt templates</li>
+                    <li>Version history</li>
+                    <li>Team workspaces</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="mt-8 glass rounded-3xl p-6 md:p-8">
+                <h2 class="text-lg font-bold">Description</h2>
+                <p class="mt-2 text-sm text-ink-300">
+                  Use semantic sections and consistent components. Replace placeholders with real product screenshots and
+                  copy.
+                </p>
+              </div>
+            </div>
+
+            <aside class="md:col-span-5">
+              <div class="glass sticky top-24 rounded-3xl p-6 md:p-8">
+                <div class="flex items-center justify-between">
+                  <div class="text-sm font-semibold text-ink-200">Pricing</div>
+                  <span class="badge">Freemium</span>
+                </div>
+                <div class="mt-5 text-4xl font-extrabold">$0<span class="text-base font-semibold text-ink-300">/mo</span></div>
+                <p class="mt-2 text-sm text-ink-300">Start for free. Upgrade for team features.</p>
+                <div class="mt-6 grid gap-3">
+                  <a class="btn-primary w-full" href="register.html">Try now</a>
+                  <a class="btn-ghost w-full" href="tools.html">Back to directory</a>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+    {{> components/footer}}
+  {{/inline}}
+{{/layouts/base}}
+
